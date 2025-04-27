@@ -1,110 +1,181 @@
-# Sentilytics
+
+# 🚀 Sentilytics
 News Sentiment Analysis Dashboard
-# Real-Time News Sentiment Dashboard with Fluvio & Groq
+Real-Time News Sentiment Dashboard with Fluvio & Gro
 
-## Overview
-This project implements a real-time news sentiment dashboard that leverages **Groq** for multimodal sentiment analysis (text + audio) and **Fluvio** for streaming breaking news data. The system fetches live news articles, analyzes their sentiment (positive, negative, or neutral), and provides real-time updates as the sentiment evolves. It is designed to process both text and audio data, making it a powerful tool for analyzing news content from multiple perspectives.
+> Empowering Real-Time Insights, One Headline at a Time: Transforming News into Actionable Sentiment.
 
-## Features
-- **Real-time News Streaming**: Uses Fluvio to stream live breaking news articles.
-- **Multimodal Sentiment Analysis**: Analyzes both text and audio content of news using Groq.
-- **Responsive User Interface**: The dashboard dynamically updates the news and sentiment analysis with a clean and modern user interface.
-- **Visual Sentiment Indicators**: Displays sentiment as color-coded labels (green for positive, red for negative, and yellow for neutral).
-- **Multimedia Integration**: Processes news articles with both textual and audio components to deliver a more comprehensive sentiment analysis.
+---
 
-## Technologies Used
-- **Frontend**: HTML, CSS, JavaScript, TailwindCSS
-- **Backend**: Flask (Python)
-- **Sentiment Analysis**: Groq (for multimodal analysis of text and audio)
-- **News Streaming**: Fluvio (for real-time news data streaming)
-- **Real-time Updates**: JavaScript and Fetch API for periodic updates
+## 📌 Problem Statement
 
-## Project Architecture
-The project is divided into three main parts:
-1. **Frontend**: Displays the sentiment dashboard and updates the content dynamically based on real-time data.
-2. **Backend**: Flask server fetches news data, performs sentiment analysis using Groq, and serves the results via a RESTful API.
-3. **Streaming & Analysis**: Fluvio is used for real-time news streaming, while Groq processes both text and audio components for sentiment analysis.
+Select the problem statement number and title from the official list given in Participant Manual.
 
-## Setup & Installation
+  
+**Problem Statement 3 – Real Time Data Experiences with Fluvio**
 
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.x
-- Flask (Backend)
-- Fluvio (for news streaming)
-- Groq (for sentiment analysis)
+---
 
-### Clone the Repository
-Clone this repository to your local machine:
+## 🎯 Objective
 
+**Real-Time Sentiment Analysis:**
+With this tool, users can quickly analyze the sentiment behind any news headline, helping them understand public perception and reactions in real-time. This is useful for:
+
+Journalists looking for quick sentiment insights on breaking news.
+Business Analysts who want to gauge market sentiments based on financial news.
+Marketing Teams monitoring public opinion on brand or product-related news.
+Tracking News Trends:
+By providing sentiment analysis for various categories of news, users can track how the mood shifts over time, identifying emerging trends and patterns. This can help users to:
+
+Researchers studying societal reactions or political climates.
+Investors keeping an eye on market sentiment and the potential impact of news on stock prices.
+Improved Decision-Making:
+With the ability to understand public sentiment, individuals and organizations can make more informed decisions. Whether it’s about a potential business venture or an investment decision, sentiment analysis helps in:
+
+Investors understanding market movements based on news.
+Leaders in political or organizational environments gauging public opinion.
+Content Creation:
+Content creators and marketers can use sentiment analysis to guide the creation of engaging content. By understanding the mood around specific topics, they can tailor their content to resonate better with the audience.
+
+How It Makes Existing Tasks Easier:
+Instant Access to Sentiment Insights:
+Traditional sentiment analysis might require complex tools or hours of work. With this tool, users get instant sentiment scores for news headlines, which saves time and allows for faster decision-making.
+
+Automated News Monitoring:
+Instead of manually tracking news articles and analyzing their tone, this system automates the entire process. 
+ ---
+
+## 🧠 Team & Approach
+
+### Team Name:  
+The DigiCrusaders
+
+### Team Members:  
+- Zobiya Hussain ([GitHub](https://github.com/ZobiyaH))  
+- Mohammad Shees ([GitHub](https://github.com/mshees01))
+- Nawaz Hussain Khan
+- Tanupriya Dutta  
+
+
+### Your Approach:  
+- Why you chose this problem
+  In today’s information-driven world, the speed and sentiment of news greatly influence public opinion, markets, and decision-making. However, real-time sentiment analysis across both text and audio streams is still rare, especially with the growing volume of breaking news.
+We chose this problem because it combines multimodal AI and real-time streaming — two frontiers where Groq and Fluvio technologies can create massive impact.
+Our goal was to build a dashboard that empowers users with instant emotional context behind news, not just headlines.
+
+- Key challenges you addressed
+  Multimodal Processing: Combining text and audio sentiment into a unified score for a better understanding of news emotions.
+Real-Time Streaming: Ensuring low-latency ingestion, processing, and dashboard updates using Fluvio for seamless streaming.
+Efficient Model Inference: Optimizing models to run efficiently and in real-time using Groq’s hardware acceleration capabilities.
+Data Noise: Handling noisy or incomplete news streams while still extracting meaningful sentiment.
+Frontend Scalability: Designing a dashboard UI that could handle rapid updates without lag or clutter.
+
+- Any pivots, brainstorms, or breakthroughs during hacking
+  Pivot to Audio: Initially, we focused only on text, but mid-hackathon brainstorming made us realize that breaking news often comes via audio/video too (like press releases or interviews), so we expanded to multimodal sentiment.
+Lightweight Models: A major breakthrough was realizing that smaller, Groq-optimized models could outperform bulkier standard models for real-time processing without losing much accuracy.
+Dynamic UI: Early tests showed that traditional dashboards got overwhelmed with rapid updates. We pivoted to a card-based UI with smooth animations to maintain user clarity even during high news volumes
+
+---
+
+## 🛠️ Tech Stack
+
+### Core Technologies Used:
+- Frontend: HTML, CSS, JAVASCRIPT, Dynamic dashboard updates using fetch API
+- Backend: Flask (Python web framework), Custom API endpoints for serving enriched news data, Integrated with **Fluvio client ** to consume real-time news streams, **Groq ** inference integration for multimodal (text + audio) sentiment analysis
+- Database: PHP, Real-time data fetched directly from Fluvio streams and processed in-memory
+- APIs: /sentiment — Fetches live sentiment-analyzed news data for frontend consumption
+- Hosting:Locally via Flask development server (localhost) during hackatho
+
+### Sponsor Technologies Used (if any):
+- [✅ ] **Groq:** Groq accelerated the real-time text and audio sentiment analysis pipeline, enabling fast, accurate insights for news events.  
+- [ ] **Monad:** _Your blockchain implementation_  
+- [ ✅] **Fluvio:** Fluvio handled the real-time streaming of news data, ensuring instant delivery to the sentiment analysis pipeline and live dashboard updates.  
+- [ ] **Base:** _AgentKit / OnchainKit / Smart Wallet usage_  
+- [ ] **Screenpipe:** _Screen-based analytics or workflows_  
+- [ ] **Stellar:** _Payments, identity, or token usage_
+*(Mark with ✅ if completed)*
+---
+
+## ✨ Key Features
+
+Highlight the most important features of your project:
+
+- ✅ Real-Time News Streaming: Instantly fetch and process live news data using Fluvio.
+- ✅ High-Speed Inference with Groq: Achieve ultra-fast model inference for real-time sentiment updates.
+- ✅ Sentiment Analysis: Analyze both text and audio from news sources for deeper insights with Groq. 
+- ✅ Multimodal Sentiment Analysis: Analyze both text and audio from news sources for deeper insights with Groq. 
+
+
+![logo](https://github.com/user-attachments/assets/4800dc07-ade3-416f-8bf4-8ba3ec24a1d5)
+<img width="954" alt="index img" src="https://github.com/user-attachments/assets/8691d3fb-f075-485c-ba99-08fed2e64e25" />
+![login img](https://github.com/user-attachments/assets/b962e493-441a-48b6-be75-8afc4359d0f6)
+
+
+
+
+---
+
+## 📽️ Demo & Deliverables
+
+- **Demo Video Link:** [https://www.loom.com/share/69db1119aec44f8e8108f0e287462b7e?sid=9098742e-0e0a-4752-bae1-f073959cbada]  
+- **Pitch Deck / PPT Link:** [(https://drive.google.com/file/d/1noCovw6PqaiSwDNlSW2Zccc_BIpg99Vz/view?usp=sharing)]  
+
+---
+
+## ✅ Tasks & Bonus Checklist
+
+- [✅ ] **All members of the team completed the mandatory task - Followed at least 2 of our social channels and filled the form** (Details in Participant Manual)  
+- [ ✅] **All members of the team completed Bonus Task 1 - Sharing of Badges and filled the form (2 points)**  (Details in Participant Manual)
+- [✅ ] **All members of the team completed Bonus Task 2 - Signing up for Sprint.dev and filled the form (3 points)**  (Details in Participant Manual)
+
+*(Mark with ✅ if completed)*
+
+---
+
+## 🧪 How to Run the Project
+
+### Requirements:
+- Python / Flask / etc.
+- API Keys (if any)
+- .env file setup (if needed)
+
+### Local Setup:
 ```bash
-git clone <repository-url>
-cd <project-directory>
+# Clone the repo
+git clone https://github.com/your-team/project-name
 
-Install Fluvio and Groq
-Follow the official documentation to install Fluvio and Groq
+# Install dependencies
+cd project-name
+npm install
 
-Ensure both are set up and running correctly.
+# Start development server
+npm run dev
+```
 
-Running the Project
-Start the Flask Backend: Run the Flask app to start the backend server:
+Provide any backend/frontend split or environment setup notes here.
 
+---
 
-Run the Frontend:
+## 🧬 Future Scope
 
-Open the index.html file in your browser to view the dashboard.
+List improvements, extensions, or follow-up features:
 
-If you are running a local server, you can use a tool like Python's HTTP server or a code editor extension (e.g., VS Code's Live Server) to view the page.
+- 📈 More integrations  
+- 🛡️ Security enhancements  
+- 🌐 Localization / broader accessibility  
 
-Streaming and Sentiment Analysis:
+---
 
-The backend will interact with Fluvio to stream real-time news and use Groq for sentiment analysis.
+## 📎 Resources / Credits
 
-The frontend will update the news sentiment dynamically every few seconds.
+- APIs or datasets used  
+- Open source libraries or tools referenced  
+- Acknowledgements  
 
-API Endpoints
-The Flask backend provides an API endpoint to fetch the sentiment data:
+---
 
+## 🏁 Final Words
 
-GET http://127.0.0.1:7800/sentiment
-This endpoint returns a JSON array of news articles with sentiment analysis:
+Share your hackathon journey — challenges, learnings, fun moments, or shout-outs!
 
-
-[
-  {
-    "headline": "Breaking News: Market Crash",
-    "category": "Finance",
-    "sentiment": "Negative",
-    "description": "The stock market has crashed due to unforeseen economic events.",
-    "source": "Financial News"
-  },
-  {
-    "headline": "Tech Industry Soars Amidst Pandemic",
-    "category": "Technology",
-    "sentiment": "Positive",
-    "description": "The tech sector is thriving even as other industries struggle.",
-    "source": "Tech Insider"
-  }
-]
-
-License
-This project is open-source and available under the MIT License.
-
-Contributing
-Feel free to contribute to this project by forking the repository and submitting pull requests. Please follow these steps:
-
-Fork the repository.
-
-Create a new branch for your feature or fix.
-
-Make your changes and test them.
-
-Submit a pull request with a clear description of your changes.
-
-Contact
-For inquiries or more information about the project, please reach out:
-
-Email: hussainzobiya27@gmail.com
-
-GitHub: @ZobiyaH
-
+---
