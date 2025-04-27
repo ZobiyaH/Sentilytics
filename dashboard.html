@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Real-Time News Dashboard</title>
+  <link rel="icon" type="image/x-icon" href="logo1.ico"> 
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-tr from-[#18182a] via-[#18182a] to-[#18182a] min-h-screen flex items-center justify-center p-4">
+  <div class="max-w-[1200px] w-full bg-white rounded-xl flex flex-col md:flex-row overflow-hidden shadow-lg">
+    <!-- Sidebar -->
+    <aside class="w-full md:w-60 border-r border-gray-200 flex flex-col justify-between">
+      <div>
+        <div class="flex items-center gap-2 px-6 py-5 border-b border-gray-200">
+          <img src="logo1.ico" alt="Dashboard Logo" class="w-8 h-8" />
+          <span class="text-base font-semibold text-[#18182a]">Sentilytics</span>
+        </div>
+        <nav class="mt-4 flex flex-col gap-2 px-6 text-gray-600 text-sm font-normal">
+          <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-[#18182a] hover:text-white rounded-lg">
+            <i class="fas fa-home"></i> Home
+          </a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-[#18182a] hover:text-white rounded-lg">
+            <i class="fas fa-fire"></i> Trending
+          </a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-[#18182a] hover:text-white rounded-lg">
+            <i class="fas fa-bookmark"></i> Bookmarked
+          </a>
+          <a href="#" class="flex items-center gap-3 px-3 py-2 hover:bg-[#18182a] hover:text-white rounded-lg">
+            <i class="fas fa-cog"></i> Settings
+          </a>
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col">
+      <!-- Header -->
+      <section class="bg-[#00bcd4] text-white flex items-center justify-between px-6 py-4">
+        <div class="text-lg font-semibold">
+          Real-Time News Sentiment Dashboard
+        </div>
+        <button class="bg-white text-[#18182a] rounded-full px-5 py-2 text-sm font-semibold">
+          View Analytics
+        </button>
+      </section>
+
+      <!-- Search -->
+      <section class="px-6 py-4 border-b border-gray-200">
+        <div class="flex items-center gap-3 max-w-xl mx-auto">
+          <div class="flex items-center flex-1 border border-gray-300 rounded-full px-4 py-2">
+            <i class="fas fa-search text-[#18182a]"></i>
+            <input type="text" class="flex-1 ml-2 bg-transparent outline-none text-sm" placeholder="Search latest news..." />
+          </div>
+          <button class="p-2 border border-gray-300 rounded-full hover:bg-[#18182a] hover:text-white">
+            <i class="fas fa-bell text-[#18182a]"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- News Cards -->
+      <section class="px-6 py-6 grid grid-cols-1 sm:grid-cols-2 gap-6 overflow-y-auto">
+        <!-- Dynamic News Card Template -->
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow group hover:shadow-lg transition-all duration-300 cursor-pointer">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 line-clamp-2 text-[#18182a]">Bomb threat prompts closure of St. Pete-Clearwater airport, sheriff says<br>-Tampa Bay Times</h3>
+            <p class="text-sm text-red-600 line-clamp-3">The sentiment of this news headline is Negative.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-400">
+              <span>Business</span>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100 rounded-lg overflow-hidden shadow group hover:shadow-lg transition-all duration-300 cursor-pointer">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg mb-2 line-clamp-2 text-[#18182a]">Bomb threat prompts closure of St. Pete-Clearwater airport, sheriff says - Tampa Bay Times</h3>
+            <p class="text-sm text-gray-600 line-clamp-3">The sentiment of this news headline is Positive.The mention of UWB is likely a hint at a future update or improvement, which also contributes to a positive sentiment.</p>
+            <div class="mt-3 flex items-center justify-between text-xs text-gray-400">
+              <span >Technology</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Duplicate above div for multiple news dynamically -->
+      </section>
+    </main>
+  </div>
+
+  
+<div id="loading-spinner" class="absolute inset-0 flex items-center justify-center bg-white bg-opacity-50 hidden">
+  <div class="spinner-border text-[#00bcd4] animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-[#00bcd4]"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
