@@ -173,9 +173,11 @@ Connect your backend Flask app with Fluvio topics to consume live news data.
 Groq:
 Requires an API key if using cloud-based models.
 
-**NEWS_API_KEY = 'b7f262aaa2aa474381e86133f4879a44'
-GROQ_API_KEY = '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'
-FLUVIO_TOPIC=news-stream**
+**NEWS_API_KEY = 'b7f262aaa2aa474381e86133f4879a44'**
+
+**GROQ_API_KEY = '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'**
+
+**FLUVIO_TOPIC=news-stream**
 
 ---
 
