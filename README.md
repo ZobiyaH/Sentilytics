@@ -1,7 +1,7 @@
 
 # 🚀 Sentilytics
 News Sentiment Analysis Dashboard
-Real-Time News Sentiment Dashboard with Fluvio & Gro
+Real-Time News Sentiment Dashboard with Fluvio & Groq
 
 > Empowering Real-Time Insights, One Headline at a Time: Transforming News into Actionable Sentiment.
 
@@ -175,7 +175,7 @@ Requires an API key if using cloud-based models.
 
 **NEWS_API_KEY = 'b7f262aaa2aa474381e86133f4879a44'**
 
-**GROQ_API_KEY = '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'**
+**GROQ_API_KEY = 'hidden due to  security reasons'**
 
 **FLUVIO_TOPIC=news-stream**
 
